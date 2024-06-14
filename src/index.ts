@@ -35,7 +35,7 @@ cli.command("save", "save a secret in the vault", async (yargs) => {
 
     entry.name = name;
     entry.email = await input({message: "account email or username?", default: ""}) as string;
-    entry.password = await input({message: "account password (this will be encrypted", default: ""}) as string;
+    entry.password = await input({message: "account password (this will be encrypted)", default: ""}) as string;
     entry.url = await input({message: "URL of account?", default: ""}) as string;
 
     await vault.saveToVault(entry, masterPass);
