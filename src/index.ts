@@ -46,7 +46,7 @@ cli.command("save", "save a secret in the vault", async (yargs) => {
 cli.command("get", "get a saved secrets info", async(yargs) => {
     const masterPass = getMasterPass(yargs);
     if(masterPass === "" || masterPass === undefined) {
-        console.error("--master-password required to store data");
+        console.error("--master-password required to retrieve data");
         process.exit(1);
     }
 
